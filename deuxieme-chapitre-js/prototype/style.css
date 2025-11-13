@@ -1,0 +1,137 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+#recherche {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#btn-recherche {
+  padding: 10px 15px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn-recherche:hover {
+  background: #2980b9;
+}
+
+#livres-container {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+#livres-container div {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: 0.3s;
+}
+
+#livres-container div:hover {
+  transform: scale(1.02);
+}
+
+#livres-container p {
+  margin: 5px 0;
+}
+
+button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #c0392b;
+}
+
+#btn-ajouter-popup {
+  display: block;
+  margin: 25px auto;
+  padding: 10px 20px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn-ajouter-popup:hover {
+  background: #219150;
+}
+
+footer, #stats-footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #555;
+  font-weight: 500;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+p {
+  margin: 12px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+form button {
+  width: 100%;
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #219150;
+}
