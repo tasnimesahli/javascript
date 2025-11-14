@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  padding: 0;
+  line-height: 1.6;
+}
+ h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-shadow: 1px 1px 2px grey;
+text-align: center;}
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0 15px 0;
+}
+
+#recherche {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 250px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#recherche:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52,152,219,0.3);
+}
+
+#btn-recherche, #btn-trier {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+  font-family: monospace;
+}
+
+#btn-recherche {
+  background: #3498db;
+  color: white;
+}
+
+#btn-recherche:hover {
+  background: #2980b9;
+}
+
+#btn-trier {
+  background: #95a5a6;
+  color: white;
+}
+
+#btn-trier:hover {
+  background: #7f8c8d;
+}
+
+#livres-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+#livres-container div {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#livres-container div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+#livres-container p {
+  margin: 6px 0;
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #10494d;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button[onclick^="supprimerLivre"] {
+  background: #e74c3c;
+  color: white;
+  margin-top: 8px;
+}
+
+button[onclick^="supprimerLivre"]:hover {
+  background: #c0392b;
+}
+
+button[onclick^="reserverLivre"] {
+  background: #f1c40f;
+  color: #2c3e50;
+  margin-top: 8px;
+}
+
+button[onclick^="reserverLivre"]:hover {
+  background: #d4ac0d;
+}
+
+#btn-ajouter-popup {
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 12px 28px;
+  background: #27ae60;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#btn-ajouter-popup:hover {
+  background: #219150;
+}
+
+#livres-container span {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  color: white;
+  background: #c0392b;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+footer {
+  background: #ffffff;
+  color: #2c3e50;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #e0e0e0;
+  font-size: 15px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer strong {
+  color: #0c293c;
+}
+
+form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+form p {
+  margin: 15px 0;
+}
+
+input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-left: 5px;
+}
+
+form button {
+  width: 100%;
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #219150;
+}
+
+@media(max-width: 700px) {
+  #livres-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #recherche {
+    width: 80%;
+  }
+}
