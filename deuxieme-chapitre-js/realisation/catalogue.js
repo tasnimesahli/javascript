@@ -33,7 +33,6 @@ ${livre.disponible ? `<button onclick="reserverLivre(${livre.code})">Réserver</
     afficherLivreLePlusCher();
 }
 
-// Supprimer un livre
 function supprimerLivre(code) {
     const index = bibliotheque.findIndex(l => l.code === code);
     if (index >= 0) {
@@ -94,3 +93,4 @@ function afficherLivreLePlusCher() {
     footer.innerHTML += `<br><strong>Le livre le plus cher :</strong> ${plusCher.titre} - ${plusCher.prix} DH`;
 }
 afficherLivre();
+
